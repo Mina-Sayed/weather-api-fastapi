@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      WEATHERSTACK_API_KEY: ${WEATHERSTACK_API_KEY}
+      CACHE_ENABLED: "true"
+      CACHE_TTL_SECONDS: "300"
